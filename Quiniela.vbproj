@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3F81AF44-3E7D-473E-8E22-7D77E9F3429F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Quiniela.My.MyApplication</StartupObject>
+    <RootNamespace>Quiniela</RootNamespace>
+    <AssemblyName>Quiniela</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Quiniela.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Quiniela.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Game.Designer.vb">
+      <DependentUpon>Game.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Game.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Landing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Landing.Designer.vb">
+      <DependentUpon>Landing.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Result.Designer.vb">
+      <DependentUpon>Result.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Result.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Game.resx">
+      <DependentUpon>Game.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Landing.resx">
+      <DependentUpon>Landing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Result.resx">
+      <DependentUpon>Result.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\america.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\atlas.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chivas.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cruz_azul.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jaguares.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leon.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leones_negros.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loser.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monarcas.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pachuca.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\puebla.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rayados.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\santos.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\side_img.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tigres.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\top_img.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unam.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\winner.jpeg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
